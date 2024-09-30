@@ -72,6 +72,18 @@ body {
     height: 100vh;
 }
 
+.cardtamanho{
+    height: 100%;
+}
+
+.cardfilho{
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    display: flex;
+    max-height: fit-content;
+}
+
 
 
 /* === responsividade css === */
