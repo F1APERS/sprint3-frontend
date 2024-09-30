@@ -1,0 +1,226 @@
+/* === Importação de Fontes === */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
+
+/* === Reset CSS === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* === Tipografia === */
+html {
+    font-family: "Anek Bangla", sans-serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --color-ice-white: #f1fbff;
+    --color-black: #000;
+}
+
+body {
+    background: var(--color-ice-white);
+    font-size: 1.6rem;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+/* === Estrutura === */
+.section-padding {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* === Componentes === */
+.carousel-item {
+    height: 100vh;
+    min-height: 30rem;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2.5rem;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.8rem;
+    line-height: 1.9;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.navbar-nav {
+    padding: 1rem;
+}
+
+.navbar-nav a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+video {
+    width: 65rem;
+    border-radius: 1.5rem;
+}
+
+.bg-special {
+    background-image: linear-gradient(180deg,
+            hsl(241deg 95% 15%) 0%,
+            hsl(233deg 92% 19%) 28%,
+            hsl(224deg 90% 23%) 42%,
+            hsl(216deg 87% 28%) 54%,
+            hsl(207deg 85% 32%) 64%,
+            hsl(198deg 83% 36%) 74%,
+            hsl(190deg 80% 40%) 83%,
+            hsl(181deg 77% 45%) 91%,
+            hsl(173deg 75% 49%) 100%);
+}
+
+/* === Solução === */
+.solução {
+    padding: 5rem 0;
+}
+
+.solução .titulo {
+    margin-bottom: 2rem;
+}
+
+.solução h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.solução p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.solução video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* === Impactos === */
+.impactos-img {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+}
+
+.impactos-img img {
+    display: none;
+}
+
+.impactos-item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.impactos-item.flex-row-reverse .impactos-img {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.impactos-text {
+    flex: 1;
+}
+
+/* === Responsividade === */
+@media (min-width: 768px) {
+    .impactos-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .impactos-item.flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .impactos-img {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .impactos-item.flex-row-reverse .impactos-img {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .problemas {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .carousel-caption {
+        bottom: 370px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-caption {
+        bottom: 12.5rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.7rem;
+    }
+
+    .carousel-caption a {
+        padding: 1rem 1.5rem;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 1.2rem;
+    }
+}
